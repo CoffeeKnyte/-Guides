@@ -1,0 +1,3 @@
+update hw kernel for hetzner boxes from kernel 4.5.0
+
+sudo apt-get install --install-recommends linux-generic-hwe-18.04
