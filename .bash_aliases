@@ -4,9 +4,7 @@ alias cpv='rsync -ah --info=progress2'
 alias delv='rsync -av --delete /opt/blank/'
 alias shortcut='nano ~/.bash_aliases; source ~/.bashrc'
 alias rinfo="ps ww $(pidof rclone)  | sed -e $'s/ *[^ ]* /\033[1;33m&\033[0m/'"
-alias cpu5='ps auxf | sort -nr -k 3 | head -5'
-alias cpu6="uptime;ps -eo user,pid,%cpu,%mem,cmd --sort=-%cpu | head -6  | sed -e $'s/ *[^ ]* /\033[1;33m&\033[0m/3'"
-alias cpu10="ps auxf | sort -nr -k 3 | head -10  | sed -e $'s/ *[^ ]* /\033[1;33m&\033[0m/3'"
+alias cpu5="uptime | sed 's,.*,\x1B[35m&\x1B[0m,';ps -eo user,pid,%cpu,%mem,cmd --sort=-%cpu | head -5  | sed -e $'s/ *[^ ]* /\033[1;33m&\033[0m/3'"
 
 #zenlocal-specific
 alias zenstall='wget -O - https://raw.githubusercontent.com/CoffeeKnyte/local-remote/main/run.sh | sudo bash'
