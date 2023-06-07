@@ -1,0 +1,26 @@
+# This is the network config written by subiquity
+network:
+  ethernets:
+    enp1s0: {}
+  version: 2
+  vlans:
+    enp1s0.150:
+      dhcp4: false
+      addresses:
+      - 208.99.62.106/24
+      - 2606:7040:208:99:62::106/64
+      gateway4: 208.99.62.1
+      gateway6: 2606:7040:208:99:62::1
+      nameservers:
+        addresses:
+        - 1.1.1.1
+        - 8.8.8.8
+        - 4.2.2.2
+        search:
+        - digitalmonks.org
+      id: 150
+      link: enp1s0
+    enp1s0.400:
+      dhcp4: true
+      id: 400
+      link: enp1s0
